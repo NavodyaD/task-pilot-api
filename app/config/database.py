@@ -7,7 +7,7 @@ import os
 load_dotenv()
 
 # Get DATABASE_URL from .env
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./classroom_management.db")
 
 # Create database engine
 engine = create_engine(DATABASE_URL)
